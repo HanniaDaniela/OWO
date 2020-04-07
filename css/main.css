@@ -460,9 +460,11 @@ h4{
   text-align: center;
 }
 p{
-  font: 12px helvetica;
+  font: .85em helvetica;
   font-weight: lighter;
 }
+
+
 
 img{
   height: auto;
