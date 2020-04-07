@@ -201,6 +201,10 @@
       border-radius: 10px;
       display: grid;
     }
+    fieldset{
+      border: 0 none;
+      border-radius: 5px;
+    }
     .map{
       grid-column: 1/2;
       grid-row: 1;
