@@ -3,6 +3,8 @@
 @import "normalize.css";
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /*MOBILE small screen-NEED TO UPDATE (WIP..)*/
 @media screen and (max-width: 500px) {
@@ -87,7 +89,6 @@
       grid-template-rows: auto;
       background-color: #789064;
       border-radius: 0.5rem;
-      /* box-shadow: 1px 15px 32px -4px rgba(129,129,129,1); */
       position: relative;
       padding: 10px;
       margin: 20px;
@@ -282,8 +283,6 @@
       grid-row: 3/4;
       text-align: justify !important;
       padding: 50px;
-      /*box-shadow: 10px 10px 0px 0px rgba(78,109,122,1);*/
-      /*border: 5px solid #a3b9ca;*/
     }
     .left{
       grid-column: 1;
@@ -348,16 +347,71 @@
       grid-column: 3/4;
       grid-row: 2;
     }
-    /*Resources Page*/
+    /*Resources Page - NEW CODE from Kevin*/
     .faq{
       display: grid;
-      grid-template-columns: auto auto auto ;
+      grid-template-columns: auto auto auto auto;
       background-color: #e6ebe0  !important;
       grid-column: 2/5;
       grid-row: 3/4;
       text-align: justify !important;
-      padding: 50px;
+      padding: 25px;
+      margin-top: 30px;
     }
+    .faq_accordion {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .faq_title {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .accordion{
+      background-color: rgba(147,130,116,0.4);
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    .active, .accordion:hover {
+      background-color: #938274;
+    }
+    .accordion:after {
+      content: "\002B";
+      color: #4a7233;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    .active:after {
+      content: "\2212";
+    }
+    .panel {
+      padding: 0 18px;
+      background-color: #e6ebe0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      border: 2px solid #938274;
+    }
+    .question {
+      font-size: 24px;
+      font-family: 'Cuprum', sans-serif;
+    }
+    .tips {
+      list-style-type: disc;
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      width: 75%;
+      text-align: left;
+      margin: 20px 0;
+    }
+    /* NEW CODE ends here! */
     .media{
       display: grid;
       grid-template-columns: auto auto auto auto;
@@ -520,12 +574,6 @@
         opacity: 80%;
       }
 
-
-      /*
-      .card:not(:first-child) {
-          margin-left: -50px;
-      }
-      */
       .card:hover {
         transform: translateY(-10px);
         transition: 0.4s ease-out;
